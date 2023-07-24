@@ -161,24 +161,17 @@
 }
 
 .slider_images {
-  width: 360px;
-  height: 330px;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-.slider_images div {
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
-.slider_images div img {
   display: block;
   position: absolute;
-  bottom: 0;
+  bottom: -300px;
   right: 0;
   border-radius: 0 0 15px 0;
+  transition: all 0.3s;
 }
+.slider_images.on {
+  bottom: 0;
+}
+
 /* 슬라이드아이템 배경색 */
 .slider_items.i1::after {
   content: "";
