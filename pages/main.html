@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>정부24-임채현</title>
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/main.css">
+    
+    <script src="../js/jquery-1.12.4.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="../js/common.js"></script>
+</head>
+<body>
+    <div class="header"></div>
+
+    <div class="wrap">
+        <div class="top">
+            <div class="left">
+                <div class="slide">
+                    <div class="slider">
+                        <a href="#"><img src="../images/images01/banner01.png" alt="커피쿠폰 당첨자 발표"></a>
+                        <a href="#"><img src="../images/images01/banner02.png" alt="국고보조금 부정수급 신고"></a>
+                    </div>
+                    <div class="slide_num">
+                        <span class="prsent">1</span>/
+                        <span class="all">2</span>
+                        <span class="before" style="cursor: pointer;"><img src="../images/images01/icons/left.png" alt=""></span>
+                        <span class="pause" style="cursor: pointer;"><img src="../images/images01/icons/pause.png" alt=""></span>
+                        <span class="next" style="cursor: pointer;"><img src="../images/images01/icons/right.png" alt=""></span>
+                    </div>
+                </div>
+                <div class="search_section">
+                    <div class="frequently_search">
+                        <div class="fs_title">자주 찾는 검색</div>
+                        <div class="rank_search">
+                            <div class="rank_searchers">
+                                <a href="#"><span>1</span> 주민등록등본</a>
+                                <a href="#"><span>2</span> 가족관계증명서</a>
+                                <a href="#"><span>3</span> 세목별과세증명서</a>
+                                <a href="#"><span>4</span> 전입신고</a>
+                                <a href="#"><span>5</span> 여권재발급</a>
+                            </div>
+                        </div>
+                        <img src="../images/images01/icons/down_search.png" alt="">
+                    </div>
+                    <div class="main_search">
+                        <p>
+                            <input type="text" id="sevice" name="service" placeholder="찾으시는 서비스를 입력하세요">
+                        </p>
+                        <img src="../images/images01/icons/search_main.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+                <img src="../images/images01/icons/ico-main-login.png" alt="">
+                <p>내게 필요한 민원/생활/혜택<br>
+                    정보를 확인하세요.</p>
+                <a href="#">로그인</a>
+                <div class="login_option">
+                    <div class="id_pw">
+                        <a href="#">아이디 찾기</a>
+                        <a href="#">비밀번호 찾기</a>
+                    </div>
+                    <a href="#">회원가입</a>
+                </div>
+            </div>
+        </div>
+    </div>
+<script>
+    $('.slider').slick({
+        autoplay : true,
+        autoplaySpeed: 3000,
+        swipe:true,
+        infinite: true,
+        pauseOnHover:false
+        },
+    );
+
+    setInterval(function(){
+        $('.rank_searchers').animate({left:-153},function(){
+            $('.rank_searchers a:first').appendTo($('.rank_searchers'))
+            $('.rank_searchers').css('left','0')
+        })
+    },2000)
+    // $('.rank_searchers').slick({
+    //     autoplay : true,
+    //     autoplaySpeed: 2000,
+    //     touchMove: true,
+    //     infinite: true,
+    //     pauseOnHover:false
+    // }
+    // );
+
+   $('.slide .slide_num .before').click(function(){
+        $('.slider').slick('slickPrev')
+   })
+   $('.slide .slide_num .next').click(function(){
+        $('.slider').slick('slickNext')
+   })
+   $('.slide .slide_num .pause').click(function(){
+       $(this).toggleClass('start')
+       if($(this).hasClass('start')){
+        $('.slider').slick('slickPlay')
+        $(this).find('img').attr('src',"../images/images01/icons/pause.png")
+        }else{
+        $('.slider').slick('slickPause')
+        $(this).find('img').attr('src',"../images/images01/icons/play.png")
+        }
+   })
+//    pagenavigator
+    $('.slider').on(
+            'beforeChange',
+            function (event, slick, currentSlide, nextSlide) {
+            $('.slide .slide_num .prsent').text(`${nextSlide + 1}`)
+            }
+        )
+   
+    
+</script>
+
+        <div class="visit_service">
+            <div class="wrap">
+                <div class="title">
+                    <h3>자주찾는 서비스( <span>19</span> )</h3>
+                    <a href="#">서비스 전체보기</a>
+                </div>
+                <div class="visit_slide">
+                    <div class="left_btn"></div>
+                    <div class="visit_sliders">
+                        <a href="#" class="visit_item i1">
+                            <p class="circle1">신청</p>
+                            <p>코로나19<br>생활지원비</p>
+                        </a>
+                        <a href="#" class="visit_item i2">
+                            <p class="circle2">발급</p>
+                            <p>토지(임야)<br>대장</p>
+                        </a>
+                        <a href="#" class="visit_item i2">
+                            <p class="circle2">발급</p>
+                            <p>주민등록본<br>(초본)</p>
+                        </a>
+                        <a href="#" class="visit_item i2">
+                            <p class="circle2">발급</p>
+                            <p>자동차<br>등록원부</p>
+                        </a>
+                        <a href="#" class="visit_item i2">
+                            <p class="circle2">발급</p>
+                            <p>건축물대장</p>
+                        </a>
+                        <a href="#" class="visit_item i2">
+                            <p class="circle2">발급</p>
+                            <p>세목별<br>과세증명</p>
+                        </a>
+                        <a href="#" class="visit_item i2">
+                            <p class="circle2">발급</p>
+                            <p>가족관계<br>증명서</p>
+                        </a>
+                        <a href="#" class="visit_item i1">
+                            <p class="circle1">신청</p>
+                            <p>여권재발급</p>
+                        </a>
+                        <a href="#" class="visit_item i1">
+                            <p class="circle1">신청</p>
+                            <p>코로나19<br>생활지원비</p>
+                        </a>
+                        <a href="#" class="visit_item i2">
+                            <p class="circle2">발급</p>
+                            <p>토지(임야)<br>대장</p>
+                        </a>
+                        <a href="#" class="visit_item i2">
+                            <p class="circle2">발급</p>
+                            <p>주민등록본<br>(초본)</p>
+                        </a>
+                        <a href="#" class="visit_item i2">
+                            <p class="circle2">발급</p>
+                            <p>자동차<br>등록원부</p>
+                        </a>
+                        <a href="#" class="visit_item i2">
+                            <p class="circle2">발급</p>
+                            <p>건축물대장</p>
+                        </a>
+                        <a href="#" class="visit_item i2">
+                            <p class="circle2">발급</p>
+                            <p>세목별<br>과세증명</p>
+                        </a>
+                        <a href="#" class="visit_item i2">
+                            <p class="circle2">발급</p>
+                            <p>가족관계<br>증명서</p>
+                        </a>
+                        <a href="#" class="visit_item i1">
+                            <p class="circle1">신청</p>
+                            <p>여권재발급</p>
+                        </a>
+                        <a href="#" class="visit_item i1">
+                            <p class="circle1">신청</p>
+                            <p>코로나19<br>생활지원비</p>
+                        </a>
+                        <a href="#" class="visit_item i2">
+                            <p class="circle2">발급</p>
+                            <p>토지(임야)<br>대장</p>
+                        </a>
+                        <a href="#" class="visit_item i2">
+                            <p class="circle2">발급</p>
+                            <p>주민등록본<br>(초본)</p>
+                        </a>
+                        <a href="#" class="visit_item i2">
+                            <p class="circle2">발급</p>
+                            <p>자동차<br>등록원부</p>
+                        </a>
+                        <a href="#" class="visit_item i2">
+                            <p class="circle2">발급</p>
+                            <p>건축물대장</p>
+                        </a>
+                        
+                    </div>
+                    <div class="right_btn"></div>
+                </div>
+                <!-- <div class="slide_section">
+                    <p class="on"></p>
+                    <p></p>
+                    <p></p>
+                </div> -->
+            </div>
+        </div>
+<script>
+    $('.visit_sliders').slick({
+        slidesToShow: 8,
+        slidesToScroll: 8,
+        autoplay: false,
+        prevArrow: $('.visit_slide .left_btn'),
+        nextArrow: $('.visit_slide .right_btn'),
+        infinite: false,
+        dots: true
+    });
+       
+</script>
+    <div class="wrap">
+        <div class="one_stop_notice">
+            <div class="one_stop_service">
+                <div class="title">
+                    <p>원스톱 서비스</p>
+                    <div class="os-go">
+                        <a href="#">중소벤처24 기업생애주기서비스 <span><img src="../images/images01/icons/go_blue.png" alt=""></span></a>
+                        <a href="#">국가보훈부 나만의 예우 <span><img src="../images/images01/icons/go_blue.png" alt=""></span></a>
+                    </div>
+                </div>
+                <div class="one_stop_slide">
+                    <div class="left_btn"></div>
+                    <div class="one_stop_sliders">
+                        <div class="one_item">
+                            <a href="#" class="os_img"><img src="../images/images01/icons/landing01.png" alt=""></a>
+                            <a href="#">전입신고+</a>
+                        </div>
+                        <div class="one_item">
+                            <a href="#" class="os_img"><img src="../images/images01/icons/landing02.png" alt=""></a>
+                            <a href="#">맘편한 임신</a>
+                        </div>
+                        <div class="one_item">
+                            <a href="#" class="os_img"><img src="../images/images01/icons/landing03.png" alt=""></a>
+                            <a href="#">행복출산</a>
+                        </div>
+                        <div class="one_item">
+                            <a href="#" class="os_img"><img src="../images/images01/icons/landing04.png" alt=""></a>
+                            <a href="#">온종일 돌봄</a>
+                        </div>
+                        <div class="one_item">
+                            <a href="#" class="os_img"><img src="../images/images01/icons/landing05.png" alt=""></a>
+                            <a href="#">꿈청소년</a>
+                        </div>
+                        <div class="one_item">
+                            <a href="#" class="os_img"><img src="../images/images01/icons/landing06.png" alt=""></a>
+                            <a href="#">취업서류</a>
+                        </div>
+                        <div class="one_item">
+                            <a href="#" class="os_img"><img src="../images/images01/icons/landing07.png" alt=""></a>
+                            <a href="#">노후생활</a>
+                        </div>
+                        <div class="one_item">
+                            <a href="#" class="os_img"><img src="../images/images01/icons/landing04.png" alt=""></a>
+                            <a href="#">온종일 돌봄</a>
+                        </div>
+                        <div class="one_item">
+                            <a href="#" class="os_img"><img src="../images/images01/icons/landing05.png" alt=""></a>
+                            <a href="#">꿈청소년</a>
+                        </div>
+                        <div class="one_item">
+                            <a href="#" class="os_img"><img src="../images/images01/icons/landing06.png" alt=""></a>
+                            <a href="#">취업서류</a>
+                        </div>
+                        <div class="one_item">
+                            <a href="#" class="os_img"><img src="../images/images01/icons/landing07.png" alt=""></a>
+                            <a href="#">노후생활</a>
+                        </div>
+                    </div>
+                    <div class="right_btn"></div>
+                </div>
+                <!-- <div class="slide_section">
+                    <p class="on"></p>
+                    <p></p>
+                </div> -->
+            </div>
+            <div class="notice">
+                <div class="title">
+                    <p>공지사항</p>
+                    <p><a href="#">+</a></p>
+                </div>
+                <ul class="notice_contents">
+                    <li><a href="#"><span><img src="../images/images01/icons/notice.png" alt=""></span>정부24 유사사이트 주의 안내</a></li>
+                    <li>
+                        <a href="#">전자지불서비스 대해업체 정기점검 안내</a>
+                        <p class="date">2023.06.13</p>
+                    </li>
+                    <li>
+                        <a href="#">[충남 서천국] 무인민원발급기 서비스 일시중지 안내</a>
+                        <p class="date">2023.06.13</p>
+                    </li> 
+                    <li>
+                        <a href="#">[인천 미추홀구] 무인민원발급기 서비스 일시중지 안내</a>
+                        <p class="date">2023.06.13</p>
+                    </li>
+                    <li>
+                        <a href="#">[교육부] 4세대 지능형 나이스 전환 준비에 따라 변경된 기능 안내</a>
+                        <p class="date">2023.06.13</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="subsidy-link">
+            <div class="subsidy">
+                <div class="ex_subsidy">
+                    <div class="logo_subsidy"><img src="../images/images01/icons/subsidy.png" alt=""><p>보조금24</div>
+                    <p>나와 가족이 받을 수 있는<br>정부혜택을 확인할 수 있어요</p></p> 
+                    <a href="#">로그인하고 확인하기 &rang;</a>
+                </div>
+                <div class="subsidy_slide">
+                    <div class="left_btn"></div>
+                    <div class="subsidy_sliders">
+                        <div class="ss_items">
+                            <a href="#">이용방법은<br>
+                                좌우로 넘겨서<br>
+                                확인하세요<br>
+                                <span>상세보기 &rang;</span>
+                            </a>
+                            <a href="#">이용방법은<br>
+                                좌우로 넘겨서<br>
+                                확인하세요<br>
+                                <span>상세보기 &rang;</span>
+                            </a>
+                            <a href="#">이용방법은<br>
+                                좌우로 넘겨서<br>
+                                확인하세요<br>
+                                <span>상세보기 &rang;</span>
+                            </a>
+                            <a href="#">이용방법은<br>
+                                좌우로 넘겨서<br>
+                                확인하세요<br>
+                                <span>상세보기 &rang;</span>
+                            </a>
+                            <a href="#">이용방법은<br>
+                                좌우로 넘겨서<br>
+                                확인하세요<br>
+                                <span>상세보기 &rang;</span>
+                            </a>
+                            <a href="#">이용방법은<br>
+                                좌우로 넘겨서<br>
+                                확인하세요<br>
+                                <span>상세보기 &rang;</span>
+                            </a>
+                            
+                        </div>
+                        <div class="slide_num">
+                            <span class="prsent">1</span>/
+                            <span class="all">6</span>
+                        </div>
+                    </div>
+                     <div class="right_btn"></div>
+                </div>
+                <a href="#" class="subsidy_btn i1">
+                    <img src="../images/images01/icons/main-subsidy-check.png" alt="">
+                    <p>정부가 제공하는<br>
+                        전체 혜택 확인</p>
+                </a>
+                <a href="#" class="subsidy_btn i2">
+                    <img src="../images/images01/icons/main-subsidy-search.png" alt="">
+                    <p>간편하게<br>
+                        찾기</p>
+
+                </a>
+            </div>
+            <div class="link">
+                <a href="#" class="link_menu">
+                    <img src="../images/images01/icons/link01.png" alt="">
+                    <P>마이데이터</P>
+                </a>
+                <a href="#" class="link_menu">
+                    <img src="../images/images01/icons/link02.png" alt="">
+                    <P>국민비서구삐</P>
+                </a>
+                <a href="#" class="link_menu">
+                    <img src="../images/images01/icons/link03.png" alt="">
+                    <P>전자증명서</P>
+                </a>
+                <a href="#" class="link_menu">
+                    <img src="../images/images01/icons/link04.png" alt="">
+                    <P>돌봄시설위치</P>
+                </a>
+            </div>
+        </div>
+        <div class="others">
+            <div class="others_btn_wrap">
+                <div class="others_btn">
+                    <a href="#" >
+                    <img src="../images/images01/icons/main_icon_img_pc2.png" alt="">
+                    <p>국가보조금<br>
+                    부정수급 신고</p>
+                    </a>
+                </div>
+                <div class="others_btn">
+                 <a href="#" >
+                    <img src="../images/images01/icons/main_icon_img_pc1.png" alt="">
+                    <p>공공개방자원<br>
+                    공유누리 서비스</p>
+                    </a>   
+                </div>
+                
+            </div>
+            <div class="news">
+                <div class="news_titles">
+                    <h3 class="on">정책뉴스</h3>
+                    <h3>연구보고서</h3>
+                    <h3>간행물</h3>
+                    <h3>정책자료</h3>
+                    <h3>+</h3>
+                </div>
+                <div class="news_contents">
+                    <ul>
+                        <li>
+                            <a href="#">[보도참고]의료기기 공동심사 프로그램, 일본·미국의 최신 기술 동향</a>
+                            <p class="date">2023.06.14</p>
+                        </li>
+                        <li>
+                            <a href="#">농심품부, 여름철 폭염 등 대처 상황 점검 실시</a>
+                            <p class="date">2023.06.14</p>
+                        </li>
+                        <li>
+                            <a href="#">‘23년 5월 정보통신산업(ICT) 수출입 동향</a>
+                            <p class="date">2023.06.14</p>
+                        </li>
+                        <li>
+                            <a href="#">재정운용전략위원회 개최</a>
+                            <p class="date">2023.06.14</p>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <a href="#">[보도참고]의료기기 공동심사 프로그램, 일본·미국의 최신 기술 동향</a>
+                            <p class="date">2023.06.14</p>
+                        </li>
+                        <li>
+                            <a href="#">‘23년 5월 정보통신산업(ICT) 수출입 동향</a>
+                            <p class="date">2023.06.14</p>
+                        </li>
+                        <li>
+                            <a href="#">농심품부, 여름철 폭염 등 대처 상황 점검 실시</a>
+                            <p class="date">2023.06.14</p>
+                        </li>
+                        <li>
+                            <a href="#">재정운용전략위원회 개최</a>
+                            <p class="date">2023.06.14</p>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <a href="#">재정운용전략위원회 개최</a>
+                            <p class="date">2023.06.14</p>
+                        </li>
+                        <li>
+                            <a href="#">[보도참고]의료기기 공동심사 프로그램, 일본·미국의 최신 기술 동향</a>
+                            <p class="date">2023.06.14</p>
+                        </li>
+                        <li>
+                            <a href="#">농심품부, 여름철 폭염 등 대처 상황 점검 실시</a>
+                            <p class="date">2023.06.14</p>
+                        </li>
+                        <li>
+                            <a href="#">‘23년 5월 정보통신산업(ICT) 수출입 동향</a>
+                            <p class="date">2023.06.14</p>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <a href="#">‘23년 5월 정보통신산업(ICT) 수출입 동향</a>
+                            <p class="date">2023.06.14</p>
+                        </li>
+                        <li>
+                            <a href="#">재정운용전략위원회 개최</a>
+                            <p class="date">2023.06.14</p>
+                        </li>
+                        <li>
+                            <a href="#">[보도참고]의료기기 공동심사 프로그램, 일본·미국의 최신 기술 동향</a>
+                            <p class="date">2023.06.14</p>
+                        </li>
+                        <li>
+                            <a href="#">농심품부, 여름철 폭염 등 대처 상황 점검 실시</a>
+                            <p class="date">2023.06.14</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="banner">
+                <div class="banners">
+                    <a href="#"><img src="../images/images01/sub_banner01.png" alt=""></a>
+                    <a href="#"><img src="../images/images01/sub_banner02.png" alt=""></a>
+                    <a href="#"><img src="../images/images01/sub_banner03.png" alt=""></a>
+                    <a href="#"><img src="../images/images01/sub_banner04.png" alt=""></a>
+                    <a href="#"><img src="../images/images01/sub_banner05.png" alt=""></a>
+                </div>
+                <div class="slide_num">
+                    <span class="prsent">1</span>/
+                    <span class="all">5</span>
+                    <span class="before" style="cursor: pointer;"><img src="../images/images01/icons/left.png" alt=""></span>
+                    <span class="pause" style="cursor: pointer;"><img src="../images/images01/icons/pause.png" alt=""></span>
+                    <span class="next" style="cursor: pointer;"><img src="../images/images01/icons/right.png" alt=""></span>
+                </div>
+            </div>
+        </div>
+    </div>
+<script>
+    $('.news_contents ul').hide();
+    $('.news_contents ul').eq(0).css('display','block');
+    
+    $('.news_titles h3').on('click',function(){
+        $('.news_titles h3').removeClass('on')
+        $(this).addClass('on')
+        $('.news_contents ul').hide()
+        $('.news_contents ul').eq($(this).index()).css('display','block')
+    })
+
+    $('.one_stop_sliders').slick({
+        slidesToShow: 7,
+        slidesToScroll: 7,
+        autoplay: false,
+        prevArrow: $('.one_stop_slide .left_btn'),
+        nextArrow: $('.one_stop_slide .right_btn'),
+        infinite: false,
+        dots: true
+    });
+    $('.ss_items').slick({
+        autoplay: false,
+        prevArrow: $('.subsidy_slide .left_btn'),
+        nextArrow: $('.subsidy_slide .right_btn'),
+    });
+
+    $('.ss_items').on(
+            'beforeChange',
+            function (event, slick, currentSlide, nextSlide) {
+            $('.subsidy_sliders .slide_num .prsent').text(`${nextSlide + 1}`)
+            }
+    )
+
+    $('.banners').slick({
+        autoplay: true,
+        prevArrow: $('.banner .slide_num .before'),
+        nextArrow: $('.banner .slide_num .next'),
+    });
+    $('.banner .slide_num .pause').click(function(){
+       $(this).toggleClass('start')
+       if($(this).hasClass('start')){
+        $('.banners').slick('slickPlay')
+        $(this).find('img').attr('src',"../images/images01/icons/pause.png")
+        }else{
+        $('.banners').slick('slickPause')
+        $(this).find('img').attr('src',"../images/images01/icons/play.png")
+        }
+   })
+   $('.banners').on(
+            'beforeChange',
+            function (event, slick, currentSlide, nextSlide) {
+            $('.banner .slide_num .prsent').text(`${nextSlide + 1}`)
+            }
+    )
+</script>
+
+        <div class="bottom">
+            <div class="wrap">
+                <p>국민소통채널</p>
+                <div class="mini_link_slide">
+                    <div class="left_btn"></div>
+                    <div class="link_sliders">
+                        <a href="#"><img src="../images/images01/channel01.jpg" alt=""></a>
+                        <a href="#"><img src="../images/images01/channel02.jpg" alt=""></a>
+                        <a href="#"><img src="../images/images01/channel03.png" alt=""></a>
+                        <a href="#"><img src="../images/images01/channel04.jpg" alt=""></a>
+                        <a href="#"><img src="../images/images01/channel05.jpg" alt=""></a>
+                        <a href="#"><img src="../images/images01/channel06.png" alt=""></a>
+                        <a href="#"><img src="../images/images01/channel07.jpg" alt=""></a>
+                        <a href="#"><img src="../images/images01/channel08.jpg" alt=""></a>
+                        <a href="#"><img src="../images/images01/channel09.png" alt=""></a>
+                        <a href="#"><img src="../images/images01/channel10.jpg" alt=""></a>
+                        <a href="#"><img src="../images/images01/channel11.jpg" alt=""></a>
+                    </div>
+                    <div class="right_btn"></div>
+                </div>  
+            </div>
+        </div>
+        <script>
+            $('.link_sliders').slick({
+                slidesToShow: 5,
+                slidesToScroll: 5,
+                autoplay: false,
+                prevArrow: $('.mini_link_slide .left_btn'),
+                nextArrow: $('.mini_link_slide .right_btn'),
+                infinite: false,
+            });
+        </script>
+
+    <div class="footer"></div>
+</body>
+</html>

@@ -1,0 +1,255 @@
+.wrap {
+  width: 1160px;
+}
+
+/* top */
+.top {
+  width: 100%;
+  height: 47px;
+  margin-top: 13px;
+  line-height: 47px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 3px solid var(--color-font);
+}
+.top h2 {
+  font-size: 24px;
+  font-weight: var(--font-black);
+}
+.share a {
+  margin-right: 3px;
+}
+
+/* section */
+.section {
+  width: 860px;
+  padding-right: 20px;
+  border-right: 1px solid var(--color-font-gray);
+}
+
+/* table */
+.tg {
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+.tg thead {
+  border-bottom: 1px solid white;
+}
+.t_border {
+  border-bottom: 1px solid white;
+}
+.tg tr {
+  height: 70px;
+}
+.tg td {
+  border: none;
+  overflow: hidden;
+  padding: 0 5px;
+  word-break: normal;
+}
+.tg th {
+  border: none;
+  font-weight: normal;
+  overflow: hidden;
+  padding: 0 5px;
+  word-break: normal;
+}
+.tg .tg-wp8o {
+  text-align: center;
+  vertical-align: middle;
+  background-color: #eee;
+}
+.tg .tg-9psx {
+  width: 80px;
+  line-height: 70px;
+  font-size: 20px;
+  font-weight: var(--font-bold);
+  background-color: #888888;
+  color: #ffffff;
+  text-align: center;
+  vertical-align: middle;
+}
+.tg .tg-73oq {
+  text-align: center;
+  line-height: 70px;
+  vertical-align: middle;
+  background-color: #eee;
+}
+
+.tg select {
+  width: 225px;
+  height: 40px;
+}
+.tg .cate_search {
+  width: 305px;
+  height: 40px;
+  padding-left: 20px;
+  border: none;
+  outline: 1px solid #ccc;
+}
+.tg .check {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+}
+
+.tg-wp8o.i1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+}
+.tg-wp8o.i1 button {
+  width: 65px;
+  height: 40px;
+  background-color: var(--color-font-moregray);
+  font-weight: var(--font-bold);
+  color: white;
+  cursor: pointer;
+}
+
+/* .result */
+.result {
+  margin-bottom: 50px;
+}
+.result_align {
+  width: 100%;
+  height: 35px;
+  line-height: 35px;
+  border-bottom: 2px solid #ccc;
+  text-align: right;
+}
+.result_align a {
+  font-weight: var(--font-medium);
+  color: var(--color-font-gray);
+  padding: 0 10px;
+  border-right: 1px solid var(--color-font-gray);
+}
+.result_align a:last-child {
+  border: none;
+}
+.result_align a.on {
+  color: #242424;
+  font-weight: var(--font-bold);
+}
+
+.result ul {
+  width: 840px;
+  height: 124px;
+  margin-top: 20px;
+  border-bottom: 1px solid var(--color-stroke);
+}
+
+.result_items {
+  padding-left: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.result_items .ri_content h4:hover {
+  text-decoration: underline;
+}
+.result_items .r1 {
+  width: 655px;
+  font-size: 14px;
+  margin: 10px 0;
+}
+
+.result_items span {
+  font-size: 14px;
+}
+
+.result_items .r2 {
+  border: 1px solid var(--color-stroke);
+  border-radius: 20px;
+  padding: 2px 6px;
+  text-align: center;
+  margin-right: 10px;
+}
+.result_items .ri_btn a {
+  display: block;
+  color: white;
+  font-weight: var(--font-bold);
+  background-color: var(--color-darkblue);
+  width: 110px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+}
+
+/* page num */
+.result_page {
+  width: 100%;
+  height: 30px;
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 90px;
+}
+
+.page_num {
+  display: block;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  margin-bottom: 2px;
+}
+.page_num.on {
+  background-color: #ee2f4d;
+  color: white;
+}
+
+/* aside */
+.wrap.apply {
+  display: flex;
+}
+.aside {
+  width: 260px;
+  height: 100%;
+  margin: 20px;
+}
+
+.banner {
+  margin-bottom: 30px;
+}
+
+.banner img {
+  width: 260px;
+}
+
+/* aside 쪽 글 */
+.menu {
+  margin-bottom: 25px;
+}
+
+.m_title {
+  width: 100%;
+  padding-bottom: 7px;
+  font-size: 14px;
+  font-weight: var(--font-medium);
+  border-bottom: 1px solid var(--color-stroke);
+}
+
+.menu ul {
+  font-size: 14px;
+  color: var(--color-font-gray);
+  padding-top: 7px;
+}
+
+.menu ul li {
+  line-height: 1.7;
+  width: 195px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.menu ul li:hover {
+  text-decoration: underline;
+}

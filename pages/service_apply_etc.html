@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>정부24 > 서비스 > 신청·조회·발급</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/service_apply_etc.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+    <style>
+        .header .gnb>li:first-child >a {
+            color: var(--color-blue-point);
+        }
+        .header .gnb>li:first-child>a::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background-color: var(--color-blue-point);
+        }
+
+    </style>
+
+    <script src="../js/jquery-1.12.4.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="../js/common.js"></script>
+
+</head>
+
+<body>
+
+    <div class="header"></div>
+    <div class="whereIam">
+        <div class="wrap">
+            <div class="where_content">
+                <span><a href="../pages/main.html">HOME</a></span>
+                <span>&rang;</span>
+                <span><a href="../pages/service_apply_etc.html">서비스</a></span>
+                <span>&rang;</span>
+                <span><a href="../pages/service_apply_etc.html">민원신청</a></span>
+                <span>&rang;</span>
+                <span><a href="../pages/service_apply_etc.html">신청·조회·발급</a></span>
+            </div>
+        </div>
+    </div>
+    <div class="wrap">
+        <div class="top">
+            <h2>신청·조회·발급</h2>
+            <div class="share">
+                <a href="#"><img src="../images/images02/icons/share1.png" alt=""></a>
+                <a href="#"><img src="../images/images02/icons/share2.png" alt=""></a>
+                <a href="#"><img src="../images/images02/icons/share3.png" alt=""></a>
+                <a href="#"><img src="../images/images02/icons/share4.png" alt=""></a>
+            </div>
+        </div>
+    </div>
+    <div class="wrap apply">
+        <div class="section">
+            <table class="tg" style="undefined;table-layout: fixed; width: 840px">
+                <thead>
+                  <tr>
+                    <th class="tg-9psx">분류</th>
+                    <th class="tg-wp8o">
+                        <select name="large" id="large">
+                            <option value="all" selected>대분류 전체</option>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+                    </th>
+                    <th class="tg-wp8o">
+                        <select name="medium" id="medium">
+                            <option value="all" selected>중분류 전체</option>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+                    </th>
+                    <th class="tg-wp8o">
+                        <select name="small" id="small">
+                            <option value="all" selected>중분류 전체</option>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="t_border">
+                    <td class="tg-9psx">기관</td>
+                    <td class="tg-wp8o">
+                        <select name="department1" id="department1">
+                            <option value="all" selected>기관분류 전체</option>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+                    </td>
+                    <td class="tg-wp8o">
+                        <select name="department2" id="department2">
+                            <option value="all" selected>제공기관 전체</option>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+                    </td>
+                    <td class="tg-73oq">
+                        <label>
+                            <input class="check" type="checkbox">모바일신청 가능서비스
+                        </label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="tg-wp8o" colspan="2"><input class="cate_search" type="text" placeholder="검색어를 입력해주세요."></td>
+                    <td class="tg-wp8o i1">
+                        <button>검색</button>
+                        <label>
+                            <input class="check" type="checkbox">결과 내 재검색
+                        </label>
+                    </td>
+                    <td class="tg-73oq"></td>
+                  </tr>
+                </tbody>
+            </table>
+            <div class="result">
+              <div class="result_align">
+                <a href="#" class="on">신청순</a>
+                <a href="#">정확도순</a>
+                <a href="#">가나다순</a>
+              </div>
+              
+              <ul>
+                <li class="result_items">
+                    <div class="ri_content">
+                        <h4><a href="#">토지(임야)대장등본발급</a></h4>
+                        <p class="r1">토지나 임야의 소재, 지변, 지목, 면적, 소유자 등의 사항이 등록된 토지대장, 임야대장, 지적도, 임야도, 경계점좌등록
+                            부를 발급 또는 열람하고자 할 때 신청하는 민원사무입니다.
+                        </p>
+                        <span class="r2">서비스</span>
+                        <span>국토교통부</span>
+                    </div>
+                    <div class="ri_btn">
+                        <a href="#">발급하기</a>
+                    </div>
+                </li>
+              </ul>
+              <ul>
+                <li class="result_items">
+                    <div class="ri_content">
+                        <h4><a href="#">토지(임야)대장등본발급</a></h4>
+                        <p class="r1">토지나 임야의 소재, 지변, 지목, 면적, 소유자 등의 사항이 등록된 토지대장, 임야대장, 지적도, 임야도, 경계점좌등록
+                            부를 발급 또는 열람하고자 할 때 신청하는 민원사무입니다.
+                        </p>
+                        <span class="r2">서비스</span>
+                        <span>국토교통부</span>
+                    </div>
+                    <div class="ri_btn">
+                        <a href="#">발급하기</a>
+                    </div>
+                </li>
+              </ul>
+              <ul>
+                <li class="result_items">
+                    <div class="ri_content">
+                        <h4><a href="#">토지(임야)대장등본발급</a></h4>
+                        <p class="r1">토지나 임야의 소재, 지변, 지목, 면적, 소유자 등의 사항이 등록된 토지대장, 임야대장, 지적도, 임야도, 경계점좌등록
+                            부를 발급 또는 열람하고자 할 때 신청하는 민원사무입니다.
+                        </p>
+                        <span class="r2">서비스</span>
+                        <span>국토교통부</span>
+                    </div>
+                    <div class="ri_btn">
+                        <a href="#">발급하기</a>
+                    </div>
+                </li>
+              </ul>
+              <ul>
+                <li class="result_items">
+                    <div class="ri_content">
+                        <h4><a href="#">토지(임야)대장등본발급</a></h4>
+                        <p class="r1">토지나 임야의 소재, 지변, 지목, 면적, 소유자 등의 사항이 등록된 토지대장, 임야대장, 지적도, 임야도, 경계점좌등록
+                            부를 발급 또는 열람하고자 할 때 신청하는 민원사무입니다.
+                        </p>
+                        <span class="r2">서비스</span>
+                        <span>국토교통부</span>
+                    </div>
+                    <div class="ri_btn">
+                        <a href="#">발급하기</a>
+                    </div>
+                </li>
+              </ul>
+              <ul>
+                <li class="result_items">
+                    <div class="ri_content">
+                        <h4><a href="#">토지(임야)대장등본발급</a></h4>
+                        <p class="r1">토지나 임야의 소재, 지변, 지목, 면적, 소유자 등의 사항이 등록된 토지대장, 임야대장, 지적도, 임야도, 경계점좌등록
+                            부를 발급 또는 열람하고자 할 때 신청하는 민원사무입니다.
+                        </p>
+                        <span class="r2">서비스</span>
+                        <span>국토교통부</span>
+                    </div>
+                    <div class="ri_btn">
+                        <a href="#">발급하기</a>
+                    </div>
+                </li>
+              </ul>
+              <ul>
+                <li class="result_items">
+                    <div class="ri_content">
+                        <h4><a href="#">토지(임야)대장등본발급</a></h4>
+                        <p class="r1">토지나 임야의 소재, 지변, 지목, 면적, 소유자 등의 사항이 등록된 토지대장, 임야대장, 지적도, 임야도, 경계점좌등록
+                            부를 발급 또는 열람하고자 할 때 신청하는 민원사무입니다.
+                        </p>
+                        <span class="r2">서비스</span>
+                        <span>국토교통부</span>
+                    </div>
+                    <div class="ri_btn">
+                        <a href="#">발급하기</a>
+                    </div>
+                </li>
+              </ul>
+              <ul>
+                <li class="result_items">
+                    <div class="ri_content">
+                        <h4><a href="#">토지(임야)대장등본발급</a></h4>
+                        <p class="r1">토지나 임야의 소재, 지변, 지목, 면적, 소유자 등의 사항이 등록된 토지대장, 임야대장, 지적도, 임야도, 경계점좌등록
+                            부를 발급 또는 열람하고자 할 때 신청하는 민원사무입니다.
+                        </p>
+                        <span class="r2">서비스</span>
+                        <span>국토교통부</span>
+                    </div>
+                    <div class="ri_btn">
+                        <a href="#">발급하기</a>
+                    </div>
+                </li>
+              </ul>
+              <ul>
+                <li class="result_items">
+                    <div class="ri_content">
+                        <h4><a href="#">토지(임야)대장등본발급</a></h4>
+                        <p class="r1">토지나 임야의 소재, 지변, 지목, 면적, 소유자 등의 사항이 등록된 토지대장, 임야대장, 지적도, 임야도, 경계점좌등록
+                            부를 발급 또는 열람하고자 할 때 신청하는 민원사무입니다.
+                        </p>
+                        <span class="r2">서비스</span>
+                        <span>국토교통부</span>
+                    </div>
+                    <div class="ri_btn">
+                        <a href="#">발급하기</a>
+                    </div>
+                </li>
+              </ul>
+              <ul>
+                <li class="result_items">
+                    <div class="ri_content">
+                        <h4><a href="#">토지(임야)대장등본발급</a></h4>
+                        <p class="r1">토지나 임야의 소재, 지변, 지목, 면적, 소유자 등의 사항이 등록된 토지대장, 임야대장, 지적도, 임야도, 경계점좌등록
+                            부를 발급 또는 열람하고자 할 때 신청하는 민원사무입니다.
+                        </p>
+                        <span class="r2">서비스</span>
+                        <span>국토교통부</span>
+                    </div>
+                    <div class="ri_btn">
+                        <a href="#">발급하기</a>
+                    </div>
+                </li>
+              </ul>
+              <ul>
+                <li class="result_items">
+                    <div class="ri_content">
+                        <h4><a href="#">토지(임야)대장등본발급</a></h4>
+                        <p class="r1">토지나 임야의 소재, 지변, 지목, 면적, 소유자 등의 사항이 등록된 토지대장, 임야대장, 지적도, 임야도, 경계점좌등록
+                            부를 발급 또는 열람하고자 할 때 신청하는 민원사무입니다.
+                        </p>
+                        <span class="r2">서비스</span>
+                        <span>국토교통부</span>
+                    </div>
+                    <div class="ri_btn">
+                        <a href="#">발급하기</a>
+                    </div>
+                </li>
+              </ul>
+            </div>
+            <div class="result_page">
+                <a href="#" class="first"><img src="../images/images02/icons/list-first.gif" alt="처음으로"></a>
+                <a href="#" class="prev"><img src="../images/images02/icons/list-prev.gif" alt="5페이지 전으로"></a>
+                <a href="#" class="page_num on">1</a>
+                <a href="#" class="page_num">2</a>
+                <a href="#" class="page_num">3</a>
+                <a href="#" class="page_num">4</a>
+                <a href="#" class="page_num">5</a>
+                <a href="#" class="next"><img src="../images/images02/icons/list-next.gif" alt="5페이지 후로"></a>
+                <a href="#" class="last"><img src="../images/images02/icons/list-last.gif" alt="마지막으로"></a>
+            </div>
+        </div>
+
+        <script>
+            $('.result_page .page_num').on('click',function(){
+                $('.result_page .page_num').removeClass('on')
+                $(this).addClass('on')
+            })
+            $('.result_page .first').click(function(){
+                $('.result_page .page_num').removeClass('on')
+                $('.result_page .page_num:first').addClass('on')
+            })
+            $('.result_page .prev').click(function(){
+                $('.result_page .page_num.on').removeClass('on').prev().addClass('on')
+            })
+            $('.result_page .next').click(function(){
+                $('.result_page .page_num.on').removeClass('on').next().addClass('on')
+            })
+            $('.result_page .last').click(function(){
+                $('.result_page .page_num').removeClass('on')
+                $('.result_page .page_num:last').addClass('on')
+            })
+        </script>
+
+        <div class="aside">
+            <div class="banner">
+                <a href="#"><img src="../images/images02/subpage_side_banner.jpg" alt=""></a>
+            </div>
+            <div class="menu">
+                <p class="m_title">내가 찾은 검색어</p>
+                <ul>
+                    <li>· 내가 찾은 검색어가 없습니다.</li>
+                </ul>
+            </div>
+            <div class="menu">
+                <p class="m_title">오늘 본 서비스</p>
+                <ul>
+                    <li>· 최근 열람 서비스가 없습니다.</li>
+                </ul>
+            </div>
+            <div class="menu">
+                <p class="m_title">많이 찾는 서비스</p>
+                <ul>
+                    <li><a href="#">① 주민등록표등본(초본)교부</a></li>
+                    <li><a href="#">② 토지(임야)대장 열람 등본발급받기</a></li>
+                    <li><a href="#">③ 건축물대장 등초본 발급(열람하기)</a></li>
+                    <li><a href="#">④ 지방세 납세증명</a></li>
+                    <li<a href="#">⑤ 지적도(임야도) 등본 발급 및 열람하기</a>></li>
+                </ul>
+            </div>
+            <div class="menu">
+                <p class="m_title">지자체뉴스</p>
+                <ul>
+                    <li><a href="#">· 부산박물관, 가족 단위 교육 체험 서비스</a></li>
+                    <li><a href="#">· 수요기업 맞춤형 인력양성 및 개발 지원</a></li>
+                    <li><a href="#">· 부산시, 가로수의 제 모양 찾을 방법 모색</a></li>
+                    <li><a href="#">· “17년 부산광역시 하수관로정밀검사</a></li>
+                    <li><a href="#">· 부산시, 「2023년 부산광역시최고라하자~</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer"></div>
+</body>
+
+</html>
