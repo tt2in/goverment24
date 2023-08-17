@@ -143,12 +143,10 @@
 }
 .gnb {
   display: flex;
-  position: relative;
 }
 .gnb > li {
   font-size: 22px;
   font-weight: 700;
-  position: relative;
 }
 .gnb > li > a {
   display: block;
