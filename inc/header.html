@@ -1,6 +1,6 @@
 <div class="head_info">
     <img src="../images/images01/icons/header.png" alt="이 누리집은 대한민국 공식 전자정부 누리집입니다.">
-    <p>이 누리집은 대한민국 공식 전자정부 누리집입니다.</p>
+    <p>웹디자인 연습을 위한 임채현의 클론 사이트 입니다.</p>
 </div>
 <div class="head_side_menu">
     <div class="hsm_wrap">
@@ -31,18 +31,17 @@
 
 </div>
 <div class="gnb_bg">
-
+    <a class="menuclose" href="#!"><img src="../images/images01/icons/icon_menuclose.png" alt=""></a>
+    <div class="login">
+        <a href="#!"><span>로그인</span>을 해주세요 ></a>
+        <div class="secure_login">
+            <a href="#!">인증서등록</a>
+            <a href="#!">간편번호/지문등록</a>
+        </div>
+    </div>
 </div>
 
 <script>
-    $('.gnb>li').hover(function () {
-        $('.gnb_bg').show()
-        $(this).find('.gnb_content').show()
-    }, function () {
-        $('.gnb_bg').hide()
-        $(this).find('.gnb_content').hide()
-    }
-    )
 
     $('.except_kr_adult li').eq(0).click(function () {
         $('.except_kr_adult li').toggleClass('active')
@@ -58,7 +57,9 @@
 
 
 <div class="head_main_menu">
+    <div class="m-bar" ><a href="#!"><img src="../images/images01/icons/icon_menu_mo.png" alt=""></a></div>
     <div class="logo"><a href="../index.html"><img src="../images/images01/logo.png" alt="정부24 메인로고"></a></div>
+    <div class="m-login" ><a href="#!"><img src="../images/images01/icons/icon_login_mo.png" alt=""></a></div>
     <div class="main_menu">
         <ul class="gnb">
             <li><a href="../pages/service_apply_etc.html">서비스</a>
@@ -190,12 +191,81 @@
 </div>
 
 <script>
-    var path = $(location).attr('pathname');
-    if (path.includes('main')) {
-        $('.first_btn').css('display', 'flex')
-        $('.second_btn').hide()
-    } else {
-        $('.first_btn').hide()
-        $('.second_btn').show()
-    }
+    var screenWidth = $(window).width()
+        var path = $(location).attr('pathname');
+
+    if(screenWidth > 475){
+            if (path.includes('main')) {
+                $('.first_btn').css('display', 'flex')
+                $('.second_btn').hide()
+            } else {
+                $('.first_btn').hide()
+                $('.second_btn').show()
+            }
+
+            $('.gnb>li').hover(function () {
+                $('.gnb_bg').show()
+                $(this).find('.gnb_content').show()
+            }, function () {
+                $('.gnb_bg').hide()
+                $(this).find('.gnb_content').hide()
+            }
+            )
+
+        }else if(screenWidth <=475){
+            // 475보다 작을때
+            $('.first_btn').hide()
+            $('.second_btn').hide()
+
+            $('.gnb>li>a').attr('href','#!')
+            $('.gnb>li').click(function () {
+                $(this).find('.gnb_content').toggleClass('on')
+            })
+        }
+
+    // window 줄어드는거 감지
+    $(window).resize(function(){
+       
+        if(screenWidth > 475){
+            if (path.includes('main')) {
+                $('.first_btn').css('display', 'flex')
+                $('.second_btn').hide()
+            } else {
+                $('.first_btn').hide()
+                $('.second_btn').show()
+            }
+            
+            $('.gnb>li').hover(function () {
+                $('.gnb_bg').show()
+                $(this).find('.gnb_content').show()
+            }, function () {
+                $('.gnb_bg').hide()
+                $(this).find('.gnb_content').hide()
+            }
+            )
+        }else if(screenWidth <=475){
+            $('.first_btn').hide()
+            $('.second_btn').hide()
+
+            $('.gnb>li>a').attr('href','#!')
+            $('.gnb>li').click(function () {
+                $(this).find('.gnb_content').toggleClass('on')
+            })
+        }
+    })
+    
+    $('.m-bar').click(function(){
+        $('.gnb_bg').show()
+        $('.main_menu').css('z-index','1000')
+        $('.gnb').css('visibility','visible')
+    })
+    $('.menuclose').click(function(){
+        $('.gnb_bg').hide()
+        $('.main_menu').css('z-index','-99')
+        $('.gnb').css('visibility','hidden')
+        $('.gnb_content').removeClass('on')
+    })
+
+    
+    
 </script>
