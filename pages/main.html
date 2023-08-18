@@ -228,16 +228,35 @@
             </div>
         </div>
 <script>
-    $('.visit_sliders').slick({
-        slidesToShow: 8,
-        slidesToScroll: 8,
-        autoplay: false,
-        prevArrow: $('.visit_slide .left_btn'),
-        nextArrow: $('.visit_slide .right_btn'),
-        infinite: false,
-        dots: true
-    });
-       
+    
+  $('.visit_sliders').slick({
+                slidesToShow: 6,
+                slidesToScroll: 6,
+                slidesPerRow: 3,
+                row: 2,
+                prevArrow: $('.visit_slide .left_btn'),
+                nextArrow: $('.visit_slide .right_btn'),
+                infinite: false,
+                dots: true,
+                autoplay: true,
+                responsive: [
+                    {
+                        breakpoint: 475,
+                        settings: {
+                            slidesToShow: 8,
+                            slidesToScroll: 8,
+                            autoplay: false,
+                            prevArrow: $('.visit_slide .left_btn'),
+                            nextArrow: $('.visit_slide .right_btn'),
+                            infinite: false,
+                            dots: true,
+                        }
+
+                    }
+                ]
+
+            });   
+
 </script>
     <div class="wrap">
         <div class="one_stop_notice">

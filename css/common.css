@@ -11,6 +11,7 @@ a {
 ul {
   list-style: none;
 }
+
 body {
   width: 100%;
   font-size: 16px;
@@ -90,4 +91,14 @@ body {
   --font-medium: 500;
   --font-bold: 700;
   --font-black: 900;
+}
+
+/* 모바일 모드 */
+@media (max-width: 475px) {
+  body {
+    font-size: 14px;
+  }
+  .wrap {
+    width: 90vw;
+  }
 }

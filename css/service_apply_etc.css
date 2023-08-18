@@ -78,6 +78,9 @@
   vertical-align: middle;
   background-color: #eee;
 }
+.tg-73oq input {
+  vertical-align: middle;
+}
 
 .tg select {
   width: 225px;
@@ -110,7 +113,9 @@
   color: white;
   cursor: pointer;
 }
-
+.tg-wp8o.i1 input {
+  vertical-align: middle;
+}
 /* .result */
 .result {
   margin-bottom: 50px;
