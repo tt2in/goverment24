@@ -192,7 +192,7 @@
     $('.slide .slider').on(
             'beforeChange',
             function (event, slick, currentSlide, nextSlide) {
-            $('.slide_num .present').text(`${nextSlide + 1}`)
+            $('.slide .slide_num .present').text(`${nextSlide + 1}`)
             }
     )
     $('.slide_num .pause').click(function(){
@@ -321,7 +321,7 @@
         $('.video_section').on(
             'beforeChange',
             function (event, slick, currentSlide, nextSlide) {
-                $('.movie .slide_num .present').text(`${nextSlide + 1}`)
+                $('.movie .title > .slide_num .present').text(`${nextSlide + 1}`)
             }
         )
             
@@ -336,10 +336,10 @@
         $('.etc_content1').on(
             'beforeChange',
             function (event, slick, currentSlide, nextSlide) {
-                $('.etc .slide_num .present').text(`${nextSlide + 1}`)
+                $('.etc .title > .slide_num .present').text(`${nextSlide + 1}`)
             }
         )
-        $('.etc .slide_num .pause').click(function(){
+        $('.etc .title > .slide_num .pause').click(function(){
        $(this).toggleClass('start')
        if($(this).hasClass('start')){
         $('.etc_content1').slick('slickPlay')

@@ -192,7 +192,8 @@
 
 <script>
     var screenWidth = $(window).width()
-        var path = $(location).attr('pathname');
+    var path = $(location).attr('pathname');
+    var letGo = $('.gnb>li>a').attr('href')
 
     if(screenWidth > 475){
             if (path.includes('main')) {
@@ -244,6 +245,9 @@
                 $(this).find('.gnb_content').hide()
             }
             )
+
+            $('.gnb>li>a').attr('href',letGo)
+            
         }else if(screenWidth <=475){
             $('.first_btn').hide()
             $('.second_btn').hide()
